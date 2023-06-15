@@ -9,5 +9,15 @@ import "../styles/index.css";
 // import Home from "./component/home.jsx";
 import SecondsCounter from "./component/SecondsCounter.jsx";
 
+
 //render your react application
-ReactDOM.render(<SecondsCounter num={7863436} />, document.querySelector("#app"));
+ReactDOM.render(<SecondsCounter/>, document.querySelector("#app"));
+
+
+// let counter = 0;
+
+// setInterval(function(){
+//     ReactDOM.render(<SecondsCounter uni={counter}/>, document.querySelector('#app'));
+//     counter += 1;
+// },
+// 1000);
