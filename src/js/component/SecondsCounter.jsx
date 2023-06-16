@@ -1,39 +1,85 @@
 import React from "react";
 import propTypes from "prop-types";
 
-const SecondsCounter = (sec) => {
+// const SecondsCounter = (sec) => {
 
-    let uni = 0;
-    let diez = 0;
-    let cien = 0;
-    let mil = 0;
-    let diezmil = 0;
-    let cienmil = 0;
-    if (uni > 9) sec.uni = uni;
+//     let uni = 0;
+//     let diez = 0;
+//     let cien = 0;
+//     let mil = 0;
+//     let diezmil = 0;
+//     let cienmil = 0;
 
 
-    return (
+
+//     return (
         
-        <div className="bg-black d-flex justify-content-center">
-            <i className="clock far fa-clock"></i>
-            <div className="num">{cienmil}</div>
-            <div className="num">{diezmil}</div>
-            <div className="num">{mil}</div>
-            <div className="num">{cien}</div>
-            <div className="num">{diez}</div>
-            <div className="num">{uni}</div>
-        </div>
+//         <div className="bg-black d-flex justify-content-center">
+//             <i className="clock far fa-clock"></i>
+//             <div className="num">{cienmil}</div>
+//             <div className="num">{diezmil}</div>
+//             <div className="num">{mil}</div>
+//             <div className="num">{cien}</div>
+//             <div className="num">{diez}</div>
+//             <div className="num">{uni}</div>
+//         </div>
  
-    )
-}
+//     )
+// }
 
-let counter = 0;
+// let counter = 0;
 
-setInterval(function(){
-   <SecondsCounter sec={counter}/>;
-    counter +=1;
-},
-1000);
+// setInterval(function(){
+//    <SecondsCounter sec={counter}/>;
+//     counter +=1;
+// },
+// 1000);
+
+// SecondsCounter.propTypes = {
+//     uni: propTypes.number,
+// }
 
 
-export default SecondsCounter
+// export default SecondsCounter
+
+const SecondsCounter = (props) => {
+    let unit = props.seconds;
+    let ten = 0;
+    let hundred = 0;
+    let thousand = 0;
+    let tenThousand = 0;
+    let hunThousand = 0;
+    if(props.seconds > 9){
+        ten =   Math.trunc(props.seconds / 10);
+        unit = props.seconds % 10;
+        if (ten > 9){
+            hundred =  Math.trunc(ten / 10);
+            ten = ten % 10;
+            if(hundred > 9){
+                thousand = Math.trunc(hundred / 10);
+                hundred = hundred %  10;
+                if(thousand > 9){
+                    tenThousand = Math.trunc(thousand / 10);
+                    thousand = thousand % 10;
+                    if(tenThousand > 9){
+                        hunThousand = Math.trunc(tenThousand / 10);
+                        tenThousand = tenThousand % 10;
+                    }
+                }
+            }
+        }
+    }
+    return (
+        <div className="app d-flex justify-content-center">
+            <div className="icon box"><i className="far fa-clock"></i></div>
+            <div className="counter box">{hunThousand}</div>
+            <div className="counter box">{tenThousand}</div>
+            <div className="counter box">{thousand}</div>
+            <div className="counter box">{hundred}</div>
+            <div className="counter box">{ten}</div>
+            <div className="counter box">{unit}</div>
+        </div>
+    );
+};
+
+export default SecondsCounter;
