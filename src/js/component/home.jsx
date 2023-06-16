@@ -1,6 +1,6 @@
 import React from "react";
 import SecondsCounter from "./SecondsCounter.jsx";
-import Alert from "./prueba.jsx";
+
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
@@ -9,8 +9,7 @@ import rigoImage from "../../img/rigo-baby.jpg";
 const Home = () => {
 	return (
 		<div>
-			<SecondsCounter />
-			{/* <Alert/> */}
+			<SecondsCounter/>
 		</div>
 	);
 };

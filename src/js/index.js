@@ -1,26 +1,22 @@
 //import react into the bundle
 import React from "react";
 import ReactDOM from "react-dom";
-import SecondsCounter from "./component/SecondsCounter.jsx";
+
 
 // include your styles into the webpack bundle
 import "../styles/index.css";
 
 //import your own components
 import Home from "./component/home.jsx";
-
+// import SecondsCounter from "./component/SecondsCounter.jsx";
 
 
 
 
 //render your react application
-// ReactDOM.render(<Home/>, document.querySelector("#app"));
-let counter = 0;
+ReactDOM.render(<Home />, document.querySelector("#app"));
 
-setInterval(function(){
-    ReactDOM.render(<SecondsCounter seconds={counter}/>, document.querySelector("#app"));
-    counter += 1;
-},
-1000);
-
-
+// setInterval(function(){
+//     ReactDOM.render(<SecondsCounter />, document.querySelector("#app"));
+       
+//     },1000);
