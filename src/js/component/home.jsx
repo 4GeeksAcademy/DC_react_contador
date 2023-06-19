@@ -24,6 +24,7 @@ const Home = (props) => {
 			stop = {props.parar}
 			play = {props.continuar}
 			reset = {props.reiniciar}  
+			back = {props.atras} 
 			/>
 		</div>
 	);

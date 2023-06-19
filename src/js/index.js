@@ -18,14 +18,21 @@ import Home from "./component/home.jsx";
     // CUENTA ATRAS
 
 let back = () => {
-    D1 = 1;
-    D2 = 1;
-    D3 = 1;
-    D4 = 1;
-    D5 = 1;
-    D6 = 1;
+    D1 = 8;
+    D2 = 9;
+    D3 = 9;
+    D4 = 9;
+    D5 = 9;
+    D6 = 9;
 
-    
+    if (D1 >= 0){
+        D1=-1;}
+    //     D2--
+    // }
+
+    D1--
+
+
 }
 
 
@@ -56,14 +63,15 @@ let reset = () => {
     intervalo = setInterval(temporizador,1000)
 }
 
+
+        // LOGICA TEMPORIZADOR
+
 let D1 = -1;
 let D2 = 0;
 let D3 = 0;
 let D4 = 0;
 let D5 = 0;
 let D6 = 0;
-
-
 
 const temporizador = () => {
 
@@ -103,6 +111,7 @@ const temporizador = () => {
         parar = {stop}
         continuar = {play} 
         reiniciar = {reset} 
+        atras = {back} 
 
         />, document.querySelector("#app"));
 }
