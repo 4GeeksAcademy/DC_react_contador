@@ -22,7 +22,8 @@ const Home = (props) => {
 			/>
 			<Botones
 			stop = {props.parar}
-			play = {props.continuar} 
+			play = {props.continuar}
+			reset = {props.reiniciar}  
 			/>
 		</div>
 	);

@@ -15,6 +15,19 @@ import Home from "./component/home.jsx";
 
 //render your react application
 
+    // CUENTA ATRAS
+
+let back = () => {
+    D1 = 1;
+    D2 = 1;
+    D3 = 1;
+    D4 = 1;
+    D5 = 1;
+    D6 = 1;
+
+    
+}
+
 
 
     // REANUDAR EL BUCLE
@@ -23,7 +36,7 @@ let play = () =>{
     setInterval(temporizador, 1000);
 }
 
-      // DETENER EL BUCLE
+    //   // DETENER EL BUCLE
 
     let stop = () => {
     clearInterval(intervalo);
@@ -31,100 +44,66 @@ let play = () =>{
 
         // REINICIAR EL BUCLE
 
-// function reiniciarContador() {
-//     sec = -1;
-//     clearInterval(temporizador);
-//     temporizador = setInterval(temporizador, 1000);
-//     }
+let reset = () => {
+    D1 = -1;
+    D2 = 0;
+    D3 = 0;
+    D4 = 0;
+    D5 = 0;
+    D6 = 0;
 
-let sec = -1;
-let min = 0;
-let hor = 0;
-let dia = 0;
-let sem = 0;
-let mes = 0;
+    clearInterval(intervalo);
+    intervalo = setInterval(temporizador,1000)
+}
 
-
-// const temporizador = setInterval(function(){
-
-//     if (sec >= 9){
-//         sec=-1;
-//         min++
-//     }
-//     if (min == 9){
-//         min=0;
-//         hor++
-//     }
-//     if (hor == 9){
-//         hor=0;
-//         dia++
-//     }
-//     if (dia == 9){
-//         dia=0;
-//         sem++
-//     }
-    
-//     if (sem == 9){
-//         sem=0;
-//         mes++
-//     }
-    
-    
-
-//     sec++
+let D1 = -1;
+let D2 = 0;
+let D3 = 0;
+let D4 = 0;
+let D5 = 0;
+let D6 = 0;
 
 
-      
-//     ReactDOM.render(<Home 
-//         segundos = {sec}
-//         minutos = {min} 
-//         horas = {hor}
-//         dias = {dia}
-//         semanas = {sem}
-//         meses = {mes}
-//         parar = {stop}
-//         continuar = {play} 
-
-//         />, document.querySelector("#app"));
-       
-//     },1000);
 
 const temporizador = () => {
-    if (sec >= 9){
-                sec=-1;
-                min++
-            }
-            if (min == 9){
-                min=0;
-                hor++
-            }
-            if (hor == 9){
-                hor=0;
-                dia++
-            }
-            if (dia == 9){
-                dia=0;
-                sem++
-            }
-            
-            if (sem == 9){
-                sem=0;
-                mes++
-            }
-            
 
-            sec++
-  
-            ReactDOM.render(<Home 
-                segundos = {sec}
-                minutos = {min} 
-                horas = {hor}
-                dias = {dia}
-                semanas = {sem}
-                meses = {mes}
-                parar = {stop}
-                continuar = {play} 
-        
-                />, document.querySelector("#app"));
+    
+    if (D1 >= 9){
+        D1=-1;
+        D2++
+    }
+    if (D2 == 9){
+        D2=0;
+        D3++
+    }
+    if (D3 == 9){
+        D3=0;
+        D4++
+    }
+    if (D4 == 9){
+        D4=0;
+        D5++
+    }
+    
+    if (D5 == 9){
+        D5=0;
+        D6++
+    }
+    
+
+    D1++
+
+    ReactDOM.render(<Home 
+        segundos = {D1}
+        minutos = {D2} 
+        horas = {D3}
+        dias = {D4}
+        semanas = {D5}
+        meses = {D6}
+        parar = {stop}
+        continuar = {play} 
+        reiniciar = {reset} 
+
+        />, document.querySelector("#app"));
 }
 let intervalo = setInterval(temporizador,1000);
