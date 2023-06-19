@@ -6,10 +6,18 @@ import SecondsCounter from "./SecondsCounter.jsx";
 import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
-const Home = () => {
-	return (
+const Home = (props) => { 
+	// console.log(props)
+
+	return(
 		<div>
-			<SecondsCounter/>
+			<SecondsCounter 
+			segundos = {props.segundos} 
+			minutos = {props.minutos} 
+			horas = {props.horas}
+			dias = {props. dias} 
+			semanas = {props. semanas}
+			meses = {props. meses}/>
 		</div>
 	);
 };
