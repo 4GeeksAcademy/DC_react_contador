@@ -1,5 +1,6 @@
 import React from "react";
 import SecondsCounter from "./SecondsCounter.jsx";
+import Botones from "./botones.jsx";
 
 
 //include images into your bundle
@@ -7,7 +8,7 @@ import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 const Home = (props) => { 
-	// console.log(props)
+
 
 	return(
 		<div>
@@ -17,7 +18,12 @@ const Home = (props) => {
 			horas = {props.horas}
 			dias = {props. dias} 
 			semanas = {props. semanas}
-			meses = {props. meses}/>
+			meses = {props. meses}
+			/>
+			<Botones
+			stop = {props.parar}
+			play = {props.continuar} 
+			/>
 		</div>
 	);
 };

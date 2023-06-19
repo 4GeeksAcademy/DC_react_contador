@@ -9,14 +9,14 @@ const SecondsCounter = (props) => {
 
     return (
         
-        <div className="bg-black d-flex justify-content-center">
+        <div className="bg-black d-flex ">
             <i className="clock far fa-clock"></i>
-            <div className="num">{props.meses}</div>
-            <div className="num">{props.semanas}</div>
-            <div className="num">{props.dias}</div>
-            <div className="num">{props.horas}</div>
-            <div className="num">{props.minutos}</div> 
-            <div className="num">{props.segundos}</div> 
+            <div className="num container-fluid">{props.meses}</div>
+            <div className="num container-fluid">{props.semanas}</div>
+            <div className="num container-fluid">{props.dias}</div>
+            <div className="num container-fluid">{props.horas}</div>
+            <div className="num container-fluid">{props.minutos}</div> 
+            <div className="num container-fluid">{props.segundos}</div> 
         </div>
  
     )
