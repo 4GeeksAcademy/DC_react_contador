@@ -17,24 +17,23 @@ import Home from "./component/home.jsx";
 
     // CUENTA ATRAS
 
-let back = () => {
-    D1 = 8;
-    D2 = 9;
-    D3 = 9;
-    D4 = 9;
-    D5 = 9;
-    D6 = 9;
-
-    if (D1 >= 0){
-        D1=-1;}
-    //     D2--
+    // let back = () => {
+    //     D1 = 8;
+    //     D2 = 9;
+    //     D3 = 9;
+    //     D4 = 9;
+    //     D5 = 9;
+    //     D6 = 9;
+    
+    //     if (D1 >= 0){
+    //         D1=-1;}
+    //     //     D2--
+    //     // }
+    
+    //     D1--
+    
+    
     // }
-
-    D1--
-
-
-}
-
 
 
     // REANUDAR EL BUCLE
@@ -45,7 +44,7 @@ let play = () =>{
 
     //   // DETENER EL BUCLE
 
-    let stop = () => {
+let stop = () => {
     clearInterval(intervalo);
     }
 
@@ -111,7 +110,7 @@ const temporizador = () => {
         parar = {stop}
         continuar = {play} 
         reiniciar = {reset} 
-        atras = {back} 
+        
 
         />, document.querySelector("#app"));
 }

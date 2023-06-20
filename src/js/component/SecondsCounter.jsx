@@ -9,7 +9,7 @@ const SecondsCounter = (props) => {
 
     return (
         
-        <div className="bg-black d-flex ">
+        <div className="bg-black d-flex m-4">
             <i className="clock far fa-clock"></i>
             <div className="num container-fluid">{props.meses}</div>
             <div className="num container-fluid">{props.semanas}</div>

@@ -1,6 +1,7 @@
 import React from "react";
 import SecondsCounter from "./SecondsCounter.jsx";
 import Botones from "./botones.jsx";
+import Alerta from "./input.jsx";
 
 
 //include images into your bundle
@@ -8,6 +9,8 @@ import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 const Home = (props) => { 
+
+
 
 
 	return(
@@ -24,8 +27,8 @@ const Home = (props) => {
 			stop = {props.parar}
 			play = {props.continuar}
 			reset = {props.reiniciar}  
-			back = {props.atras} 
 			/>
+			<Alerta/>
 		</div>
 	);
 };
