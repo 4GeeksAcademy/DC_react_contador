@@ -28,7 +28,9 @@ const Home = (props) => {
 			play = {props.continuar}
 			reset = {props.reiniciar}  
 			/>
-			<Alerta/>
+			<Alerta
+			alerta = {props.alarma}
+			/>
 		</div>
 	);
 };

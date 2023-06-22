@@ -35,16 +35,17 @@ import Home from "./component/home.jsx";
     
     // }
 
-
+let intervalo = setInterval(temporizador,1000);
     // REANUDAR EL BUCLE
 
 let play = () =>{
-    setInterval(temporizador, 1000);
+   intervalo = setInterval(temporizador, 1000);
 }
 
     //   // DETENER EL BUCLE
 
 let stop = () => {
+    // console.log("funciona");
     clearInterval(intervalo);
     }
 
@@ -62,6 +63,31 @@ let reset = () => {
     intervalo = setInterval(temporizador,1000)
 }
 
+let alerta= (seg) => {
+  
+
+//     D1 = -1;
+//     D2 = 0;
+//     D3 = 0;
+//     D4 = 0;
+//     D5 = 0;
+//     D6 = 0;
+
+//     clearInterval(intervalo);
+//    console.log(seg);
+   setTimeout(temporizador,seg);
+//    
+   
+
+//    clearTimeout(intervalo)
+//    if (newSeg === intervalo) {
+   
+//     clearInterval(intervalo) 
+    // alert ("Tu tiempo ha pasado")
+//     }
+
+};  
+
 
         // LOGICA TEMPORIZADOR
 
@@ -72,7 +98,7 @@ let D4 = 0;
 let D5 = 0;
 let D6 = 0;
 
-const temporizador = () => {
+function temporizador() {
 
     
     if (D1 >= 9){
@@ -110,8 +136,9 @@ const temporizador = () => {
         parar = {stop}
         continuar = {play} 
         reiniciar = {reset} 
+        alarma = {alerta}
         
 
         />, document.querySelector("#app"));
 }
-let intervalo = setInterval(temporizador,1000);
+

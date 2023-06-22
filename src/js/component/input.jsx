@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 
 
-const Alerta = () => {
+const Alerta = (props) => {
 
-    const [valorInput, setValorInput] = useState('');
+    const [valorInput, setValorInput] = useState('null');
 
     const handleInputChange = (event) => {
         setValorInput(event.target.value);
@@ -12,20 +12,17 @@ const Alerta = () => {
 
     let segundos = Math.floor(`${valorInput}` * 1000);
 
-    console.log(segundos);
+    function handlerAlerta () {
 
-    let prueba = () => {
+        props.alerta(segundos)
 
-        let al = () => {
+    }
 
-            alert ("Tu tiempo ha pasado")
 
-        };
-       
-       setInterval(al,segundos);
-  
-    };  
+    // console.log(segundos);
+
     
+
 
     return (
         <><input 
@@ -36,7 +33,7 @@ const Alerta = () => {
             id="ale" 
             placeholder="Segundos"/>
 
-        <button className="btn btn-success" onClick={prueba}>Alarma</button>
+        <button className="btn btn-success" onClick={handlerAlerta}>Alarma</button>
         </>
     )
 
