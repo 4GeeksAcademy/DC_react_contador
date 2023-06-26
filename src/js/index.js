@@ -63,28 +63,24 @@ let reset = () => {
     intervalo = setInterval(temporizador,1000)
 }
 
+        // ALARMA
+
 let alerta= (seg) => {
   
 
-//     D1 = -1;
-//     D2 = 0;
-//     D3 = 0;
-//     D4 = 0;
-//     D5 = 0;
-//     D6 = 0;
+    D1 = -1;
+    D2 = 0;
+    D3 = 0;
+    D4 = 0;
+    D5 = 0;
+    D6 = 0;
 
-//     clearInterval(intervalo);
-//    console.log(seg);
-   setTimeout(temporizador,seg);
-//    
-   
+    clearInterval(intervalo);
+    intervalo = setInterval(temporizador,1000)
 
-//    clearTimeout(intervalo)
-//    if (newSeg === intervalo) {
-   
-//     clearInterval(intervalo) 
-    // alert ("Tu tiempo ha pasado")
-//     }
+    setTimeout(() => {
+        alert ("Tu tiempo ha pasado");
+    }, seg);
 
 };  
 
@@ -140,5 +136,5 @@ function temporizador() {
         
 
         />, document.querySelector("#app"));
-}
+};
 
